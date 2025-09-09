@@ -1,7 +1,5 @@
+import 'package:calculadora/app/funcoes/clear.dart';
 import 'package:flutter/material.dart';
-import 'package:jogo_da_velha/app/funcoes/clear.dart';
-
-import 'package:jogo_da_velha/app/operacao/calcular.dart';
 
 class ActionButton extends StatelessWidget {
   final TextEditingController resultadoEC;

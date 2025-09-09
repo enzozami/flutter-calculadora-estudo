@@ -1,7 +1,7 @@
+import 'package:calculadora/app/module/home/widgets/action_button.dart';
+import 'package:calculadora/app/module/home/widgets/numbers.dart';
+import 'package:calculadora/app/module/home/widgets/operator.dart';
 import 'package:flutter/material.dart';
-import 'package:jogo_da_velha/app/module/home/widgets/action_button.dart';
-import 'package:jogo_da_velha/app/module/home/widgets/numbers.dart';
-import 'package:jogo_da_velha/app/module/home/widgets/operator.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});

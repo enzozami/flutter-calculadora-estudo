@@ -1,5 +1,5 @@
+import 'package:calculadora/app/module/home/home_page.dart';
 import 'package:flutter/material.dart';
-import 'package:jogo_da_velha/app/module/home/home_page.dart';
 
 void main() {
   runApp(const MyApp());
