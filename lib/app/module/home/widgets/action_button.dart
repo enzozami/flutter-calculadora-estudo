@@ -1,4 +1,5 @@
 import 'package:calculadora/app/funcoes/clear.dart';
+import 'package:calculadora/app/module/home/widgets/widget/numeric_button.dart';
 import 'package:flutter/material.dart';
 
 class ActionButton extends StatelessWidget {
@@ -24,69 +25,37 @@ class ActionButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Padding(
-          padding: const EdgeInsets.all(5.0),
-          child: ElevatedButton(
-            style: ElevatedButton.styleFrom(
-              minimumSize: const Size(80, 80),
-            ),
-            onPressed: () {
-              clearAll(controllerEC1, controllerEC2, operatorEC, resultadoEC);
-              onSetCurrent(1);
-            },
-            child: Center(
-              child: Text('C'),
-            ),
-          ),
+        NumericButton(
+          onPressed: () {
+            clearAll(controllerEC1, controllerEC2, operatorEC, resultadoEC);
+            onSetCurrent(1);
+          },
+          label: 'C',
         ),
-        Padding(
-          padding: const EdgeInsets.all(5.0),
-          child: ElevatedButton(
-            style: ElevatedButton.styleFrom(
-              minimumSize: const Size(80, 80),
-            ),
-            onPressed: () {
-              if (controllerCurrent == 1) {
-                clearLastDigit(controllerEC1);
-              }
-              if (controllerCurrent == 2) {
-                clearLastDigit(controllerEC2);
-              }
-            },
-            child: Center(
-              child: Text('⌫', style: TextStyle(fontSize: 24)),
-            ),
-          ),
+        NumericButton(
+          onPressed: () {
+            if (controllerCurrent == 1) {
+              clearLastDigit(controllerEC1);
+            }
+            if (controllerCurrent == 2) {
+              clearLastDigit(controllerEC2);
+            }
+          },
+          label: '⌫',
         ),
-        Padding(
-          padding: const EdgeInsets.all(5.0),
-          child: ElevatedButton(
-            style: ElevatedButton.styleFrom(
-              minimumSize: const Size(80, 80),
-            ),
-            onPressed: () {
-              onSetCurrent(2);
-              operatorEC.text = '%';
-            },
-            child: Center(
-              child: Text('%'),
-            ),
-          ),
+        NumericButton(
+          onPressed: () {
+            onSetCurrent(2);
+            operatorEC.text = '%';
+          },
+          label: '%',
         ),
-        Padding(
-          padding: const EdgeInsets.all(5.0),
-          child: ElevatedButton(
-            style: ElevatedButton.styleFrom(
-              minimumSize: const Size(80, 80),
-            ),
-            onPressed: () {
-              onSetCurrent(2);
-              operatorEC.text = '/';
-            },
-            child: Center(
-              child: Text('/'),
-            ),
-          ),
+        NumericButton(
+          onPressed: () {
+            onSetCurrent(2);
+            operatorEC.text = '/';
+          },
+          label: '/',
         ),
       ],
     );

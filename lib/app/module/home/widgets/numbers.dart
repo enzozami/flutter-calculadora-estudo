@@ -1,3 +1,4 @@
+import 'package:calculadora/app/module/home/widgets/widget/numeric_button.dart';
 import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
@@ -28,148 +29,64 @@ class Numbers extends StatelessWidget {
           children: [
             Row(
               children: [
-                Padding(
-                  padding: const EdgeInsets.all(5.0),
-                  child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      minimumSize: const Size(80, 80),
-                      backgroundColor: Colors.amber,
-                    ),
-                    onPressed: () => setValue('7'),
-                    child: Center(
-                      child: Text('7'),
-                    ),
-                  ),
+                NumericButton(
+                  onPressed: () => setValue('7'),
+                  label: '7',
+                  backgoundColor: Colors.amber,
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(5.0),
-                  child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      minimumSize: const Size(80, 80),
-                      backgroundColor: Colors.amber,
-                    ),
-                    onPressed: () => setValue('8'),
-                    child: Center(
-                      child: Text('8'),
-                    ),
-                  ),
+                NumericButton(
+                  onPressed: () => setValue('8'),
+                  label: '8',
+                  backgoundColor: Colors.amber,
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(5.0),
-                  child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      minimumSize: const Size(80, 80),
-                      backgroundColor: Colors.amber,
-                    ),
-                    onPressed: () => setValue('9'),
-                    child: Center(
-                      child: Text('9'),
-                    ),
-                  ),
+                NumericButton(
+                  onPressed: () => setValue('9'),
+                  label: '9',
+                  backgoundColor: Colors.amber,
                 ),
               ],
             ),
             Row(
               children: [
-                Padding(
-                  padding: const EdgeInsets.all(5.0),
-                  child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      minimumSize: const Size(80, 80),
-                      backgroundColor: Colors.amber,
-                    ),
-                    onPressed: () => setValue('4'),
-                    child: Center(
-                      child: Text('4'),
-                    ),
-                  ),
+                NumericButton(
+                  onPressed: () => setValue('4'),
+                  label: '4',
+                  backgoundColor: Colors.amber,
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(5.0),
-                  child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      minimumSize: const Size(80, 80),
-                      backgroundColor: Colors.amber,
-                    ),
-                    onPressed: () => setValue('5'),
-                    child: Center(
-                      child: Text('5'),
-                    ),
-                  ),
+                NumericButton(
+                  onPressed: () => setValue('5'),
+                  label: '5',
+                  backgoundColor: Colors.amber,
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(5.0),
-                  child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      minimumSize: const Size(80, 80),
-                      backgroundColor: Colors.amber,
-                    ),
-                    onPressed: () => setValue('6'),
-                    child: Center(
-                      child: Text('6'),
-                    ),
-                  ),
+                NumericButton(
+                  onPressed: () => setValue('6'),
+                  label: '6',
+                  backgoundColor: Colors.amber,
                 ),
               ],
             ),
             Row(
               children: [
-                Padding(
-                  padding: const EdgeInsets.all(5.0),
-                  child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      minimumSize: const Size(80, 80),
-                      backgroundColor: Colors.amber,
-                    ),
-                    onPressed: () => setValue('1'),
-                    child: Center(
-                      child: Text('1'),
-                    ),
-                  ),
+                NumericButton(
+                  onPressed: () => setValue('1'),
+                  label: '1',
+                  backgoundColor: Colors.amber,
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(5.0),
-                  child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      minimumSize: const Size(80, 80),
-                      backgroundColor: Colors.amber,
-                    ),
-                    onPressed: () => setValue('2'),
-                    child: Center(
-                      child: Text('2'),
-                    ),
-                  ),
+                NumericButton(
+                  onPressed: () => setValue('2'),
+                  label: '2',
+                  backgoundColor: Colors.amber,
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(5.0),
-                  child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      minimumSize: const Size(80, 80),
-                      backgroundColor: Colors.amber,
-                    ),
-                    onPressed: () => setValue('3'),
-                    child: Center(
-                      child: Text('3'),
-                    ),
-                  ),
+                NumericButton(
+                  onPressed: () => setValue('3'),
+                  label: '3',
+                  backgoundColor: Colors.amber,
                 ),
               ],
             ),
             Row(
               children: [
-                Padding(
-                  padding: const EdgeInsets.all(5.0),
-                  child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      minimumSize: const Size(80, 80),
-                      backgroundColor: Colors.amber,
-                    ),
-                    onPressed: () => setValue('0'),
-                    child: Center(
-                      child: Text('0'),
-                    ),
-                  ),
-                ),
+                NumericButton(onPressed: () => setValue('0'), label: '0'),
               ],
             )
           ],

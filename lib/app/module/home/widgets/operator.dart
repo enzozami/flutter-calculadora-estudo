@@ -1,4 +1,5 @@
 import 'package:calculadora/app/funcoes/clear.dart';
+import 'package:calculadora/app/module/home/widgets/widget/numeric_button.dart';
 import 'package:calculadora/app/operacao/calcular.dart';
 import 'package:flutter/material.dart';
 
@@ -48,62 +49,24 @@ class Operator extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Padding(
-          padding: const EdgeInsets.all(5.0),
-          child: ElevatedButton(
-            style: ElevatedButton.styleFrom(
-              minimumSize: const Size(80, 80),
-            ),
-            onPressed: () {
-              onOperatorPressed('*');
-            },
-            child: Center(
-              child: Text('x'),
-            ),
-          ),
+        NumericButton(
+          onPressed: () => onOperatorPressed('*'),
+          label: 'x',
         ),
-        Padding(
-          padding: const EdgeInsets.all(5.0),
-          child: ElevatedButton(
-            style: ElevatedButton.styleFrom(
-              minimumSize: const Size(80, 80),
-            ),
-            onPressed: () {
-              onOperatorPressed('-');
-            },
-            child: Center(
-              child: Text('-'),
-            ),
-          ),
+        NumericButton(
+          onPressed: () => onOperatorPressed('-'),
+          label: '-',
         ),
-        Padding(
-          padding: const EdgeInsets.all(5.0),
-          child: ElevatedButton(
-            style: ElevatedButton.styleFrom(
-              minimumSize: const Size(80, 80),
-            ),
-            onPressed: () {
-              onOperatorPressed('+');
-            },
-            child: Center(
-              child: Text('+'),
-            ),
-          ),
+        NumericButton(
+          onPressed: () => onOperatorPressed('+'),
+          label: '+',
         ),
-        Padding(
-          padding: const EdgeInsets.all(5.0),
-          child: ElevatedButton(
-            style: ElevatedButton.styleFrom(
-              minimumSize: const Size(80, 80),
-            ),
-            onPressed: () {
-              onOperatorPressed(operatorEC.text, isEqual: true);
-              onSetCurrent(1);
-            },
-            child: Center(
-              child: Text('='),
-            ),
-          ),
+        NumericButton(
+          onPressed: () {
+            onOperatorPressed(operatorEC.text, isEqual: true);
+            onSetCurrent(1);
+          },
+          label: '=',
         ),
       ],
     );
