@@ -22,51 +22,93 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       body: Container(
         color: Colors.black,
-        child: Column(
-          children: [
-            Form(
-              key: _formKey,
-              child: Row(
-                children: [
-                  TextFormField(
-                    readOnly: true,
-                    controller: controllerEC1,
-                    decoration: InputDecoration(
-                      border: OutlineInputBorder(),
+        child: Expanded(
+          child: Column(
+            children: [
+              SizedBox(
+                height: MediaQuery.of(context).size.height * .4,
+                child: Form(
+                  key: _formKey,
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Column(
+                      children: [
+                        Expanded(
+                          child: TextFormField(
+                            textAlign: TextAlign.end,
+                            readOnly: true,
+                            controller: controllerEC1,
+                            decoration: InputDecoration(
+                              border: InputBorder.none,
+                            ),
+                            style: TextStyle(color: Colors.white),
+                          ),
+                        ),
+                        SizedBox(
+                          height: 50,
+                          width: 50,
+                          child: TextFormField(
+                            textAlign: TextAlign.end,
+                            readOnly: true,
+                            decoration: InputDecoration(
+                              border: InputBorder.none,
+                            ),
+                            controller: operatorEC,
+                            style: TextStyle(color: Colors.white),
+                          ),
+                        ),
+                        Expanded(
+                          child: TextFormField(
+                            textAlign: TextAlign.end,
+                            readOnly: true,
+                            decoration: InputDecoration(
+                              border: InputBorder.none,
+                            ),
+                            controller: controllerEC2,
+                            style: TextStyle(color: Colors.white),
+                          ),
+                        ),
+                      ],
                     ),
-                    style: TextStyle(color: Colors.white),
                   ),
-                  TextFormField(
-                    readOnly: true,
-                    controller: controllerEC2,
-                    decoration: InputDecoration(
-                      border: OutlineInputBorder(),
-                    ),
-                    style: TextStyle(color: Colors.white),
-                  ),
-                ],
+                ),
               ),
-            ),
-            Row(
-              children: [
-                Numbers(
-                  controllerEC1: controllerEC1,
-                  controllerEC2: controllerEC2,
-                  controllerCurrent: controllerCurrent,
+              Divider(
+                color: Colors.white,
+              ),
+              Container(
+                height: MediaQuery.of(context).size.height * .6,
+                padding: EdgeInsets.all(10),
+                child: Row(
+                  children: [
+                    Numbers(
+                      controllerEC1: controllerEC1,
+                      controllerEC2: controllerEC2,
+                      controllerCurrent: controllerCurrent,
+                    ),
+                    VerticalDivider(
+                      color: Colors.white,
+                    ),
+                    Operator(
+                      controllerEC1: controllerEC1,
+                      controllerEC2: controllerEC2,
+                      operatorEC: operatorEC,
+                      onSetCurrent: (int value) {
+                        setState(() {
+                          controllerCurrent = value;
+                        });
+                      },
+                      // onCalculator: (double resultado) {
+                      //   setState(() {
+                      //     controllerEC1.text = resultado.toString();
+                      //   });
+                      // },
+                    ),
+                  ],
                 ),
-                Operator(
-                  controllerEC1: controllerEC1,
-                  controllerEC2: controllerEC2,
-                  operatorEC: operatorEC,
-                  onSetCurrent: (int value) {
-                    setState(() {
-                      controllerCurrent = value;
-                    });
-                  },
-                ),
-              ],
-            )
-          ],
+              )
+            ],
+          ),
         ),
       ),
     );

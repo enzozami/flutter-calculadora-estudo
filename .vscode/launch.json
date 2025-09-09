@@ -6,18 +6,18 @@
     "configurations": [
         
         {
-            "name": "jogo_da_velha",
+            "name": "calculadora",
             "request": "launch",
             "type": "dart"
         },
         {
-            "name": "jogo_da_velha (profile mode)",
+            "name": "calculadora (profile mode)",
             "request": "launch",
             "type": "dart",
             "flutterMode": "profile"
         },
         {
-            "name": "jogo_da_velha (release mode)",
+            "name": "calculadora (release mode)",
             "request": "launch",
             "type": "dart",
             "flutterMode": "release"

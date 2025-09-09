@@ -6,14 +6,16 @@ class Operator extends StatelessWidget {
   final TextEditingController controllerEC1;
   final TextEditingController controllerEC2;
   final TextEditingController operatorEC;
-  void Function(int) onSetCurrent;
+  final void Function(int) onSetCurrent;
+  // final void Function(double) onCalculator;
 
-  Operator({
+  const Operator({
     super.key,
     required this.controllerEC1,
     required this.controllerEC2,
     required this.operatorEC,
     required this.onSetCurrent,
+    // required this.onCalculator,
   });
 
   static get setControllerCurrent => null;
@@ -27,6 +29,9 @@ class Operator extends StatelessWidget {
             Row(
               children: [
                 ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    minimumSize: const Size(70, 70),
+                  ),
                   onPressed: () {
                     onSetCurrent(2);
                     operatorEC.text = '+';
@@ -36,6 +41,9 @@ class Operator extends StatelessWidget {
                   ),
                 ),
                 ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    minimumSize: const Size(70, 70),
+                  ),
                   onPressed: () {
                     onSetCurrent(2);
                     operatorEC.text = '-';
@@ -44,7 +52,14 @@ class Operator extends StatelessWidget {
                     child: Text('-'),
                   ),
                 ),
+              ],
+            ),
+            Row(
+              children: [
                 ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    minimumSize: const Size(70, 70),
+                  ),
                   onPressed: () {
                     onSetCurrent(2);
                     operatorEC.text = '*';
@@ -53,11 +68,10 @@ class Operator extends StatelessWidget {
                     child: Text('x'),
                   ),
                 ),
-              ],
-            ),
-            Row(
-              children: [
                 ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    minimumSize: const Size(70, 70),
+                  ),
                   onPressed: () {
                     onSetCurrent(2);
                     operatorEC.text = '/';
@@ -66,22 +80,38 @@ class Operator extends StatelessWidget {
                     child: Text('/'),
                   ),
                 ),
+              ],
+            ),
+            Row(
+              children: [
                 ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    minimumSize: const Size(70, 70),
+                  ),
                   onPressed: () {},
                   child: Center(
                     child: Text('%'),
                   ),
                 ),
                 ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    minimumSize: const Size(70, 70),
+                  ),
                   onPressed: () {
-                    return calcular(controllerEC1, controllerEC2, operatorEC);
+                    String op = operatorEC.text;
+
+                    double num1 = double.tryParse(controllerEC1.text) ?? 0.0;
+                    double num2 = double.tryParse(controllerEC2.text) ?? 0.0;
+                    double resultado = calcular(num1, num2, op);
+                    clear(controllerEC2);
+                    controllerEC1.text = resultado.toString();
                   },
                   child: Center(
                     child: Text('='),
                   ),
                 ),
               ],
-            ),
+            )
           ],
         ),
       ],

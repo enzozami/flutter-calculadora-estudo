@@ -1,27 +1,22 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
-void calcular(TextEditingController controllerEC1, TextEditingController controllerEC2,
-    TextEditingController operatorEC) {
-  String valor1 = controllerEC1.text;
-  String valor2 = controllerEC2.text;
-  String operacao = operatorEC.text;
-  double resultado;
-
-  double num1 = double.tryParse(valor1) ?? 0.0;
-  double num2 = double.tryParse(valor2) ?? 0.0;
-
-  switch (operacao) {
+double calcular(double num1, double num2, String op) {
+  switch (op) {
     case '+':
-      resultado = num1 + num2;
-      break;
+      return num1 + num2;
     case '-':
-      resultado = num1 - num2;
-      break;
+      return num1 - num2;
     case '*':
-      resultado = num1 * num2;
-      break;
+      return num1 * num2;
     case '/':
-      resultado = num1 / num2;
-      break;
+      return num1 / num2;
+    case '%':
+    // return num1 ?? num2 / 100;
+    default:
+      return 0.0;
   }
+}
+
+String clear(TextEditingController controllerEC2) {
+  return controllerEC2.text = '';
 }
