@@ -38,8 +38,10 @@ class Operator extends StatelessWidget {
       }
     }
 
-    operatorEC.text = opNew;
-    onSetCurrent(2);
+    if (!isEqual) {
+      operatorEC.text = opNew;
+      onSetCurrent(2);
+    }
   }
 
   @override
@@ -96,6 +98,7 @@ class Operator extends StatelessWidget {
             ),
             onPressed: () {
               onOperatorPressed(operatorEC.text, isEqual: true);
+              onSetCurrent(1);
             },
             child: Center(
               child: Text('='),

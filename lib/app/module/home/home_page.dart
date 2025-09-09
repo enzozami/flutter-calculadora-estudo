@@ -41,10 +41,12 @@ class _HomePageState extends State<HomePage> {
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
                       Row(
                         children: [
-                          Expanded(
+                          Flexible(
+                            fit: FlexFit.loose,
                             child: TextFormField(
                               textAlign: TextAlign.end,
                               readOnly: true,
@@ -58,7 +60,8 @@ class _HomePageState extends State<HomePage> {
                               ),
                             ),
                           ),
-                          Expanded(
+                          Flexible(
+                            fit: FlexFit.loose,
                             child: TextFormField(
                               textAlign: TextAlign.end,
                               readOnly: true,
@@ -72,7 +75,8 @@ class _HomePageState extends State<HomePage> {
                               ),
                             ),
                           ),
-                          Expanded(
+                          Flexible(
+                            fit: FlexFit.loose,
                             child: TextFormField(
                               textAlign: TextAlign.end,
                               readOnly: true,
@@ -88,7 +92,8 @@ class _HomePageState extends State<HomePage> {
                           ),
                         ],
                       ),
-                      Expanded(
+                      Flexible(
+                        fit: FlexFit.loose,
                         child: TextFormField(
                           textAlign: TextAlign.end,
                           readOnly: true,
