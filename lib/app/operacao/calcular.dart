@@ -22,8 +22,9 @@ void clear(TextEditingController controllerEC1) {
 }
 
 void clearAll(TextEditingController controllerEC1, TextEditingController controllerEC2,
-    TextEditingController operatorEC) {
+    TextEditingController operatorEC, TextEditingController resultadoEC) {
   controllerEC1.clear();
   controllerEC2.clear();
   operatorEC.clear();
+  resultadoEC.clear();
 }

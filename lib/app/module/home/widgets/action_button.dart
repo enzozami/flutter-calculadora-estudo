@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:jogo_da_velha/app/operacao/calcular.dart';
 
 class ActionButton extends StatelessWidget {
+  final TextEditingController resultadoEC;
   final TextEditingController controllerEC1;
   final TextEditingController controllerEC2;
   final TextEditingController operatorEC;
@@ -15,6 +16,7 @@ class ActionButton extends StatelessWidget {
     required this.controllerEC2,
     required this.operatorEC,
     required this.onSetCurrent,
+    required this.resultadoEC,
     // required this.onCalculator,
   });
 
@@ -31,7 +33,7 @@ class ActionButton extends StatelessWidget {
               minimumSize: const Size(80, 80),
             ),
             onPressed: () {
-              clearAll(controllerEC1, controllerEC2, operatorEC);
+              clearAll(controllerEC1, controllerEC2, operatorEC, resultadoEC);
               onSetCurrent(1);
             },
             child: Center(

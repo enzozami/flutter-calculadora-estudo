@@ -22,6 +22,26 @@ class Operator extends StatelessWidget {
 
   static get setControllerCurrent => null;
 
+  void onOperatorPressed(String opNew, {bool isEqual = false}) {
+    double num1 = double.tryParse(controllerEC1.text) ?? 0.0;
+    double num2 = double.tryParse(controllerEC2.text) ?? 0.0;
+    String opCurrent = operatorEC.text;
+
+    if (opCurrent.isNotEmpty && controllerEC2.text.isNotEmpty) {
+      double resultado = calcular(num1, num2, opCurrent);
+      resultadoEC.text = resultado.toString();
+
+      if (!isEqual) {
+        controllerEC1.text = resultado.toString();
+        clear(operatorEC);
+        clear(controllerEC2);
+      }
+    }
+
+    operatorEC.text = opNew;
+    onSetCurrent(2);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -33,8 +53,7 @@ class Operator extends StatelessWidget {
               minimumSize: const Size(80, 80),
             ),
             onPressed: () {
-              onSetCurrent(2);
-              operatorEC.text = '*';
+              onOperatorPressed('*');
             },
             child: Center(
               child: Text('x'),
@@ -48,8 +67,7 @@ class Operator extends StatelessWidget {
               minimumSize: const Size(80, 80),
             ),
             onPressed: () {
-              onSetCurrent(2);
-              operatorEC.text = '-';
+              onOperatorPressed('-');
             },
             child: Center(
               child: Text('-'),
@@ -63,8 +81,7 @@ class Operator extends StatelessWidget {
               minimumSize: const Size(80, 80),
             ),
             onPressed: () {
-              onSetCurrent(2);
-              operatorEC.text = '+';
+              onOperatorPressed('+');
             },
             child: Center(
               child: Text('+'),
@@ -78,14 +95,7 @@ class Operator extends StatelessWidget {
               minimumSize: const Size(80, 80),
             ),
             onPressed: () {
-              String op = operatorEC.text;
-
-              double num1 = double.tryParse(controllerEC1.text) ?? 0.0;
-              double num2 = double.tryParse(controllerEC2.text) ?? 0.0;
-              double resultado = calcular(num1, num2, op);
-              onSetCurrent(1);
-              resultadoEC.text = resultado.toString();
-              // clear(controllerEC2);
+              onOperatorPressed(operatorEC.text, isEqual: true);
             },
             child: Center(
               child: Text('='),

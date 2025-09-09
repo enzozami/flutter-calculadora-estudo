@@ -20,6 +20,15 @@ class _HomePageState extends State<HomePage> {
   int controllerCurrent = 1;
 
   @override
+  void dispose() {
+    super.dispose();
+    resultadoEC.dispose();
+    controllerEC1.dispose();
+    controllerEC2.dispose();
+    operatorEC.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
@@ -116,6 +125,7 @@ class _HomePageState extends State<HomePage> {
                         controllerCurrent = value;
                       });
                     },
+                    resultadoEC: resultadoEC,
                   ),
                   Row(
                     children: [
