@@ -1,4 +1,4 @@
-import 'package:calculadora/app/module/home/home_page.dart';
+import 'package:calculadora/app/app_widget.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.black),
       ),
-      home: HomePage(),
+      home: AppWidget(),
     );
   }
 }
