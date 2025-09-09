@@ -131,6 +131,7 @@ class _HomePageState extends State<HomePage> {
                       });
                     },
                     resultadoEC: resultadoEC,
+                    controllerCurrent: controllerCurrent,
                   ),
                   Row(
                     children: [
@@ -138,9 +139,6 @@ class _HomePageState extends State<HomePage> {
                         controllerEC1: controllerEC1,
                         controllerEC2: controllerEC2,
                         controllerCurrent: controllerCurrent,
-                      ),
-                      VerticalDivider(
-                        color: Colors.white,
                       ),
                       Operator(
                         controllerEC1: controllerEC1,

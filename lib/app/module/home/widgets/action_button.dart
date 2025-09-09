@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:jogo_da_velha/app/funcoes/clear.dart';
 
 import 'package:jogo_da_velha/app/operacao/calcular.dart';
 
@@ -8,6 +9,7 @@ class ActionButton extends StatelessWidget {
   final TextEditingController controllerEC2;
   final TextEditingController operatorEC;
   final void Function(int) onSetCurrent;
+  final int controllerCurrent;
   // final void Function(double) onCalculator;
 
   const ActionButton({
@@ -17,10 +19,8 @@ class ActionButton extends StatelessWidget {
     required this.operatorEC,
     required this.onSetCurrent,
     required this.resultadoEC,
-    // required this.onCalculator,
+    required this.controllerCurrent,
   });
-
-  static get setControllerCurrent => null;
 
   @override
   Widget build(BuildContext context) {
@@ -47,7 +47,29 @@ class ActionButton extends StatelessWidget {
             style: ElevatedButton.styleFrom(
               minimumSize: const Size(80, 80),
             ),
-            onPressed: () {},
+            onPressed: () {
+              if (controllerCurrent == 1) {
+                clearLastDigit(controllerEC1);
+              }
+              if (controllerCurrent == 2) {
+                clearLastDigit(controllerEC2);
+              }
+            },
+            child: Center(
+              child: Text('⌫', style: TextStyle(fontSize: 24)),
+            ),
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.all(5.0),
+          child: ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              minimumSize: const Size(80, 80),
+            ),
+            onPressed: () {
+              onSetCurrent(2);
+              operatorEC.text = '%';
+            },
             child: Center(
               child: Text('%'),
             ),
