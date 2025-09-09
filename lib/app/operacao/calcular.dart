@@ -17,6 +17,13 @@ double calcular(double num1, double num2, String op) {
   }
 }
 
-String clear(TextEditingController controllerEC2) {
-  return controllerEC2.text = '';
+void clear(TextEditingController controllerEC1) {
+  controllerEC1.clear();
+}
+
+void clearAll(TextEditingController controllerEC1, TextEditingController controllerEC2,
+    TextEditingController operatorEC) {
+  controllerEC1.clear();
+  controllerEC2.clear();
+  operatorEC.clear();
 }

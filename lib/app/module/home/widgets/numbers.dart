@@ -28,126 +28,146 @@ class Numbers extends StatelessWidget {
           children: [
             Row(
               children: [
-                ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    minimumSize: const Size(75, 75),
-                    backgroundColor: Colors.amber,
-                  ),
-                  onPressed: () => setValue('1'),
-                  child: Center(
-                    child: Text('1'),
-                  ),
-                ),
-                ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    minimumSize: const Size(75, 75),
-                    backgroundColor: Colors.amber,
-                  ),
-                  onPressed: () => setValue('2'),
-                  child: Center(
-                    child: Text('2'),
+                Padding(
+                  padding: const EdgeInsets.all(5.0),
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      minimumSize: const Size(80, 80),
+                      backgroundColor: Colors.amber,
+                    ),
+                    onPressed: () => setValue('1'),
+                    child: Center(
+                      child: Text('1'),
+                    ),
                   ),
                 ),
-                ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    minimumSize: const Size(75, 75),
-                    backgroundColor: Colors.amber,
-                  ),
-                  onPressed: () => setValue('3'),
-                  child: Center(
-                    child: Text('3'),
-                  ),
-                ),
-              ],
-            ),
-            Row(
-              children: [
-                ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    minimumSize: const Size(75, 75),
-                    backgroundColor: Colors.amber,
-                  ),
-                  onPressed: () => setValue('4'),
-                  child: Center(
-                    child: Text('4'),
+                Padding(
+                  padding: const EdgeInsets.all(5.0),
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      minimumSize: const Size(80, 80),
+                      backgroundColor: Colors.amber,
+                    ),
+                    onPressed: () => setValue('2'),
+                    child: Center(
+                      child: Text('2'),
+                    ),
                   ),
                 ),
-                ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    minimumSize: const Size(75, 75),
-                    backgroundColor: Colors.amber,
-                  ),
-                  onPressed: () => setValue('5'),
-                  child: Center(
-                    child: Text('5'),
-                  ),
-                ),
-                ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    minimumSize: const Size(75, 75),
-                    backgroundColor: Colors.amber,
-                  ),
-                  onPressed: () => setValue('6'),
-                  child: Center(
-                    child: Text('6'),
+                Padding(
+                  padding: const EdgeInsets.all(5.0),
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      minimumSize: const Size(80, 80),
+                      backgroundColor: Colors.amber,
+                    ),
+                    onPressed: () => setValue('3'),
+                    child: Center(
+                      child: Text('3'),
+                    ),
                   ),
                 ),
               ],
             ),
             Row(
               children: [
-                ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    minimumSize: const Size(75, 75),
-                    backgroundColor: Colors.amber,
-                  ),
-                  onPressed: () => setValue('7'),
-                  child: Center(
-                    child: Text('7'),
-                  ),
-                ),
-                ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    minimumSize: const Size(75, 75),
-                    backgroundColor: Colors.amber,
-                  ),
-                  onPressed: () => setValue('8'),
-                  child: Center(
-                    child: Text('8'),
+                Padding(
+                  padding: const EdgeInsets.all(5.0),
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      minimumSize: const Size(80, 80),
+                      backgroundColor: Colors.amber,
+                    ),
+                    onPressed: () => setValue('4'),
+                    child: Center(
+                      child: Text('4'),
+                    ),
                   ),
                 ),
-                ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    minimumSize: const Size(75, 75),
-                    backgroundColor: Colors.amber,
+                Padding(
+                  padding: const EdgeInsets.all(5.0),
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      minimumSize: const Size(80, 80),
+                      backgroundColor: Colors.amber,
+                    ),
+                    onPressed: () => setValue('5'),
+                    child: Center(
+                      child: Text('5'),
+                    ),
                   ),
-                  onPressed: () => setValue('9'),
-                  child: Center(
-                    child: Text('9'),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(5.0),
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      minimumSize: const Size(80, 80),
+                      backgroundColor: Colors.amber,
+                    ),
+                    onPressed: () => setValue('6'),
+                    child: Center(
+                      child: Text('6'),
+                    ),
                   ),
                 ),
               ],
             ),
             Row(
               children: [
-                ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    minimumSize: const Size(75, 75),
-                    backgroundColor: Colors.amber,
-                  ),
-                  onPressed: () => setValue('0'),
-                  child: Center(
-                    child: Text('0'),
+                Padding(
+                  padding: const EdgeInsets.all(5.0),
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      minimumSize: const Size(80, 80),
+                      backgroundColor: Colors.amber,
+                    ),
+                    onPressed: () => setValue('7'),
+                    child: Center(
+                      child: Text('7'),
+                    ),
                   ),
                 ),
-                ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    minimumSize: const Size(75, 75),
-                    backgroundColor: Colors.amber,
+                Padding(
+                  padding: const EdgeInsets.all(5.0),
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      minimumSize: const Size(80, 80),
+                      backgroundColor: Colors.amber,
+                    ),
+                    onPressed: () => setValue('8'),
+                    child: Center(
+                      child: Text('8'),
+                    ),
                   ),
-                  onPressed: () {},
-                  child: Center(
-                    child: Text('C'),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(5.0),
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      minimumSize: const Size(80, 80),
+                      backgroundColor: Colors.amber,
+                    ),
+                    onPressed: () => setValue('9'),
+                    child: Center(
+                      child: Text('9'),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            Row(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(5.0),
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      minimumSize: const Size(80, 80),
+                      backgroundColor: Colors.amber,
+                    ),
+                    onPressed: () => setValue('0'),
+                    child: Center(
+                      child: Text('0'),
+                    ),
                   ),
                 ),
               ],
