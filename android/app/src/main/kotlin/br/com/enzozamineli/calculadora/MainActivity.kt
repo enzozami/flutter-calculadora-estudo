@@ -1,4 +1,4 @@
-package br.com.enzozamineli.jogo_da_velha
+package br.com.enzozamineli.calculadora
 
 import io.flutter.embedding.android.FlutterActivity
 
